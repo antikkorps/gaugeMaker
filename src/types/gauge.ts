@@ -50,7 +50,7 @@ export const defaultGaugeConfig: GaugeConfig = {
   color: '#3b82f6',
   backgroundColor: '#f1f5f9',
   showDetail: true,
-  size: 400,
+  size: 350,
   colorRanges: [
     { start: 0, end: 30, color: '#22c55e' }, // Green
     { start: 30, end: 70, color: '#f59e0b' }, // Orange

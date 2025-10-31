@@ -44,7 +44,7 @@ withDefaults(defineProps<Props>(), {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.625rem 1.25rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   font-weight: 600;
@@ -52,6 +52,12 @@ withDefaults(defineProps<Props>(), {
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .buy-me-coffee-btn {
+    padding: 0.75rem 1.5rem;
+  }
 }
 
 .buy-me-coffee-btn:hover {
@@ -64,9 +70,15 @@ withDefaults(defineProps<Props>(), {
 }
 
 .buy-me-coffee-btn.compact {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .buy-me-coffee-btn.compact {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .coffee-icon {

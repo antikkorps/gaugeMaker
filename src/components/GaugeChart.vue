@@ -3,7 +3,7 @@
     <div
       ref="containerRef"
       :style="{ width: config.size + 'px', height: config.size * 0.75 + 'px' }"
-      class="chart-container"
+      class="chart-container max-w-full"
     />
   </div>
 </template>
