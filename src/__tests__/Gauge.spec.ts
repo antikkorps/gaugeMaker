@@ -41,11 +41,11 @@ describe('useGauge composable', () => {
   it('initializes with default configuration', () => {
     const { config } = useGauge()
 
-    expect(config.value).toBe(50)
+    expect(config.value).toBe(65)
     expect(config.min).toBe(0)
     expect(config.max).toBe(100)
-    expect(config.title).toBe('Gauge')
-    expect(config.unit).toBe('%')
+    expect(config.title).toBe('Speed')
+    expect(config.unit).toBe('km/h')
   })
 
   it('updates value within range', () => {
@@ -68,14 +68,14 @@ describe('useGauge composable', () => {
     // Modify config
     config.value = 80
     config.title = 'Test Gauge'
-    config.useGradient = true
+    config.useGradient = false
 
     // Reset
     resetConfig()
 
-    expect(config.value).toBe(50)
-    expect(config.title).toBe('Gauge')
-    expect(config.useGradient).toBe(false)
+    expect(config.value).toBe(65)
+    expect(config.title).toBe('Speed')
+    expect(config.useGradient).toBe(true)
   })
 
   it('manages color ranges correctly', () => {
