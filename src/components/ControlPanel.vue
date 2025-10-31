@@ -1,9 +1,9 @@
 <template>
   <div class="control-panel">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">Gauge Configuration</h2>
+    <h2 class="text-xl font-bold mb-4 text-gray-800 md:text-2xl md:mb-6">Gauge Configuration</h2>
 
     <!-- Basic Settings -->
-    <div class="space-y-4 mb-6">
+    <div class="space-y-3 mb-4 md:space-y-4 md:mb-6">
       <div>
         <label class="block text-sm font-medium text-gray-700 mb-2"> Title </label>
         <input
@@ -26,10 +26,10 @@
     </div>
 
     <!-- Value Settings -->
-    <div class="space-y-4 mb-6">
-      <h3 class="text-lg font-semibold text-gray-800">Value Range</h3>
+    <div class="space-y-3 mb-4 md:space-y-4 md:mb-6">
+      <h3 class="text-base font-semibold text-gray-800 md:text-lg">Value Range</h3>
 
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2"> Min </label>
           <input
@@ -80,8 +80,8 @@
     </div>
 
     <!-- Appearance Settings -->
-    <div class="space-y-4 mb-6">
-      <h3 class="text-lg font-semibold text-gray-800">Appearance</h3>
+    <div class="space-y-3 mb-4 md:space-y-4 md:mb-6">
+      <h3 class="text-base font-semibold text-gray-800 md:text-lg">Appearance</h3>
 
       <!-- Color Mode Selection -->
       <div class="flex items-center mb-4">
@@ -94,7 +94,7 @@
       </div>
 
       <!-- Single Color Mode -->
-      <div v-if="!config.useGradient" class="grid grid-cols-2 gap-4">
+      <div v-if="!config.useGradient" class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2"> Gauge Color </label>
           <input
@@ -142,7 +142,7 @@
             </button>
           </div>
 
-          <div class="grid grid-cols-3 gap-2">
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
             <div>
               <label class="block text-xs text-gray-600 mb-1">Start</label>
               <input
@@ -189,7 +189,7 @@
           v-model.number="config.size"
           type="range"
           class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500"
-          min="200"
+          min="250"
           max="600"
           step="10"
         />
@@ -207,7 +207,7 @@
     </div>
 
     <!-- Action Buttons -->
-    <div class="flex gap-4">
+    <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
       <button @click="exportGauge" class="export-button flex-1">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
