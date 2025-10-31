@@ -44,10 +44,13 @@ export function useGauge() {
           colors.push([endPos, '#e5e7eb'])
           colors.push([1, '#e5e7eb'])
         } else if (index < sortedRanges.length - 1) {
-          const nextStart = (sortedRanges[index + 1].start - config.min) / (config.max - config.min)
-          if (endPos < nextStart) {
-            colors.push([endPos, '#e5e7eb'])
-            colors.push([nextStart, '#e5e7eb'])
+          const nextRange = sortedRanges[index + 1]
+          if (nextRange) {
+            const nextStart = (nextRange.start - config.min) / (config.max - config.min)
+            if (endPos < nextStart) {
+              colors.push([endPos, '#e5e7eb'])
+              colors.push([nextStart, '#e5e7eb'])
+            }
           }
         }
       })

@@ -82,6 +82,14 @@ src/
 
 4. **Export**: Click "Export as PNG" to download your customized gauge
 
+## ☕ Support This Project
+
+If you find this gauge maker useful, consider supporting my work! Your support helps me continue building and maintaining open-source tools like this.
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/fvienot)
+
+_Visit [buymeacoffee.com/fvienot](https://www.buymeacoffee.com/fvienot) to support this project!_
+
 ## 🧪 Testing
 
 ```bash
